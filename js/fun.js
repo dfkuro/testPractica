@@ -8,6 +8,9 @@ function init() {
 	alert("accessing the data");
 	var fido = new Dog("Fido", "Mixed", 40);
 	fido.bark();
+	
+	var chi = new Dog("Chi", "Mixed", 5);
+	chi.bark();
 }
 
 function Dog(name, breed, weight) {
