@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>work001</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Darkfalcon" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<style>
+			canvas {
+				border: 1px solid black;
+			}
+		</style>
+		<script >
+			window.onload = function() {
+				//var canvas = document.getElementById("tshirtCanvas");
+				//var context = canvas.getContext("2d");
+				var posx = 10;
+				var posy = 10;
+				var widthrec = 580;
+				var heightrec = 180;
+			
+
+				/*
+				do{
+				context.strokeRect(posx, posy, widthrec, heightrec);D
+
+				
+
+				}while (widthrec >= 20)
+				setInterval()
+				//context.strokeRect(10, 10, 580, 180);*/
+				//setInterval("drawLinesRec(posx, posy, widthrec, heightrec)", 1000);
+				drawLinesRec(posx, posy, widthrec, heightrec);
+			}
+
+			function drawLinesRec(posx, posy, widthrec, heightrec) {
+				var canvas = document.getElementById("tshirtCanvas");
+				var context = canvas.getContext("2d");
+
+				context.strokeRect(posx, posy, widthrec, heightrec);
+
+				if (posx <= 90) {
+					this.posx = posx + 10;
+					this.posy = posy + 10;
+					this.widthrec = widthrec - 20;
+					this.heightrec = heightrec - 20;
+
+					setInterval("drawLinesRec(this.posx, this.posy, this.widthrec, this.heightrec)", 3000);
+				} else {
+					
+				}
+
+				
+			}
+
+			
+
+		</script>
+	</head>
+
+	<body>
+		<canvas id="tshirtCanvas" width="600" height="200"></canvas>
+	</body>
+</html>
+
